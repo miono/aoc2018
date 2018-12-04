@@ -24,7 +24,7 @@ func (g *guard) registerSleep(fallAsleepTime time.Time, wakeUpTime time.Time) {
 	}
 }
 
-func (g *guard) registerSleepyness() {
+func (g *guard) registerSleepiness() {
 	var sleepiestMinute string
 	maxSleep := 0
 	for i := range g.minuteMap {
@@ -126,7 +126,7 @@ func main() {
 
 	// EXTRACTING SOLUTION FOR PART 2
 	for _, g := range guards {
-		g.registerSleepyness()
+		g.registerSleepiness()
 	}
 	var maxSleepTime int
 	var worstGuard int
